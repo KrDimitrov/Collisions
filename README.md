@@ -7,6 +7,8 @@ Collisions
 Adds a `clone()` function, for deep copying bodies. Currently only added to :
 * Polygon
 
+---
+
 * [Installation](#anchor-installation)
 * [Documentation](#anchor-documentation)
 * [Demos](#anchor-demos)
