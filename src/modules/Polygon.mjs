@@ -25,6 +25,12 @@ export default class Polygon extends Body {
 		this.angle = angle;
 
 		/**
+		 * @desc A Copy of the points the polycon was constructed with
+		 * @type {Array<Number[]>}
+		 */
+		this.points = JSON.parse(JSON.stringify(points));
+
+		/**
 		 * @desc The scale of the body along the X axis
 		 * @type {Number}
 		 */
@@ -241,5 +247,13 @@ export default class Polygon extends Body {
 		}
 
 		this._dirty_normals = false;
+	}
+
+	/**
+	 * @desc Clones a Polygon. Returning a new instance, with the same parameters.
+	 * @returns {Polygon}
+	 */
+	clone() {
+		return new Polygon(this.x, this.y, this.points, this.angle, this.scale_x, this.scale_y, this.padding);
 	}
 };
