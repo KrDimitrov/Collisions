@@ -4,8 +4,11 @@ Collisions
 **Collisions** is a JavaScript library for quickly and accurately detecting collisions between Polygons, Circles, and Points. It combines the efficiency of a [Bounding Volume Hierarchy](https://en.wikipedia.org/wiki/Bounding_volume_hierarchy) (BVH) for broad-phase searching and the accuracy of the [Separating Axis Theorem](https://en.wikipedia.org/wiki/Separating_axis_theorem) (SAT) for narrow-phase collision testing.
 
 # Fork changes
-Adds a `clone()` function, for deep copying bodies. Currently only added to :
-* Polygon
+* Adds a `clone()` function, for deep copying bodies. Currently only added to :
+	* Polygon
+
+* Adds JSON serialization/deserialization functions To:
+	* Polygon
 
 ---
 
@@ -30,9 +33,11 @@ Adds a `clone()` function, for deep copying bodies. Currently only added to :
 <a name="anchor-installation"></a>
 Installation
 ===============================================================================
+**Currently not released to NPM**
+You can still install it using npm from git.
 
 ```bash
-npm install collisions
+npm install git+https://github.com/KrDimitrov/Collisions.git
 ```
 
 > **Note:** This library uses the native ECMAScript Module syntax. Most environments support native modules, but the following exceptions apply:
